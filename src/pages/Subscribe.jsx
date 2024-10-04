@@ -8,7 +8,7 @@ import SubPlans from "../components/SubPlans";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./WorkAsTeacher.css";
-export default function Subscripe() {
+export default function Subscribe() {
   return (
     <>
       <div className="container sub-page col-lg-9">
