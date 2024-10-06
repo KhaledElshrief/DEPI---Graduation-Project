@@ -35,7 +35,7 @@ const TechnologyTools = () => {
                 <div className="flex mr-auto ml-auto relative">
                     <div className="relative min-h-[1px] flex">
                         <div className="relative w-full flex-wrap justify-between p-5">
-                            <div className="mb-20 mb-20 w-full relative space-y-[20px] space-x-[20px]">
+                            <div className=" mb-20 w-full relative space-y-[20px] space-x-[20px]">
                                 <div className="w-full ml-auto mr-auto">
                                     <p className="rtl mb-[30px]">فى عصر تسلل فيه التكنولوجيا إلى كل جزء من حياتنا، يمر التعليم بثورة نوعية بفضل سلسلة من الإبتكارات التكنولوجية</p>
                                     <p className="rtl mb-[30px]">تلك الأدوات لا تسهم فقط فى جعل المواد التعليمية أكثر جاذبية و تفاعلية للطلاب، و لكنها أيضاً تعمل على تحسين تجربة التعليم بشكل شامل
