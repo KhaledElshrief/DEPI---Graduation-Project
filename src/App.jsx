@@ -8,6 +8,7 @@ import For_students from "./pages/For_students";
 import QatarPage from "./pages/Qatar_Page";
 import GroupsPage from "./pages/GroupsPage";
 import Private from "./pages/Private";
+import WhoKhososy from "./pages/WhoKhososy";
 const App = () => {
     return (
         <>
@@ -30,6 +31,7 @@ const App = () => {
                             path="/For_students/Private"
                             element={<Private />}
                         ></Route>
+                        <Route path="/whokhososy" element={<WhoKhososy/>}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

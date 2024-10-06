@@ -53,7 +53,8 @@ const Navbar = () => {
                 <ul className="flex space-x-6 text-gray-700 text-sm">
                     <li className="hover:text-black cursor-pointer">حسابي</li>
                     <li className="hover:text-black cursor-pointer">
-                        مين خصوصي؟
+                        
+                        <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink> 
                     </li>
                     <li className="hover:text-black cursor-pointer">
                         <NavLink to={"/Subscribe"}>الإشتراك كستنر</NavLink>
