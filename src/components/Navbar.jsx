@@ -86,7 +86,7 @@ const Navbar = () => {
                                 أماكن تعليمية
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                                مدونة خصوصي
+                            <NavLink to={"/Blog"} >مدونة خصوصي</NavLink>    
                             </li>
                         </ul>
                     </li>

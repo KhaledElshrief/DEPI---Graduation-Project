@@ -9,6 +9,11 @@ import QatarPage from "./pages/Qatar_Page";
 import GroupsPage from "./pages/GroupsPage";
 import Private from "./pages/Private";
 import WhoKhososy from "./pages/WhoKhososy";
+import CardsContainer from "./components/CardsContainer";
+import BlogCardsContainer from "./components/BlogCardsContainer";
+import TechnologyTools from "./components/TechnologyTools";
+import NewLearning from "./components/NewLearning";
+import LearningSys from "./components/LearningSys";
 const App = () => {
     return (
         <>
@@ -32,6 +37,10 @@ const App = () => {
                             element={<Private />}
                         ></Route>
                         <Route path="/whokhososy" element={<WhoKhososy/>}></Route>
+                        <Route path="/Blog" element={<BlogCardsContainer />}></Route>
+                        <Route path="/TechTools" element={<TechnologyTools />}></Route>
+                        <Route path="/NewLearning" element={<NewLearning />}></Route>
+                        <Route path="/LearningSys" element={<LearningSys />}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
