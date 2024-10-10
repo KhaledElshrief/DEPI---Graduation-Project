@@ -14,6 +14,7 @@ import BlogCardsContainer from "./components/BlogCardsContainer";
 import TechnologyTools from "./components/TechnologyTools";
 import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
+import CoursesView from "./pages/CoursesView";
 const App = () => {
     return (
         <>
@@ -36,11 +37,27 @@ const App = () => {
                             path="/For_students/Private"
                             element={<Private />}
                         ></Route>
-                        <Route path="/whokhososy" element={<WhoKhososy/>}></Route>
-                        <Route path="/Blog" element={<BlogCardsContainer />}></Route>
-                        <Route path="/TechTools" element={<TechnologyTools />}></Route>
-                        <Route path="/NewLearning" element={<NewLearning />}></Route>
-                        <Route path="/LearningSys" element={<LearningSys />}></Route>
+                        <Route
+                            path="/whokhososy"
+                            element={<WhoKhososy />}
+                        ></Route>
+                        <Route
+                            path="/Blog"
+                            element={<BlogCardsContainer />}
+                        ></Route>
+                        <Route
+                            path="/TechTools"
+                            element={<TechnologyTools />}
+                        ></Route>
+                        <Route
+                            path="/NewLearning"
+                            element={<NewLearning />}
+                        ></Route>
+                        <Route
+                            path="/LearningSys"
+                            element={<LearningSys />}
+                        ></Route>
+                        <Route path="/Courses-view" element={<CoursesView />}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

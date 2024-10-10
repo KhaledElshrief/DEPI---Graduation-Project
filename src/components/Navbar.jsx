@@ -53,8 +53,7 @@ const Navbar = () => {
                 <ul className="flex space-x-6 text-gray-700 text-sm">
                     <li className="hover:text-black cursor-pointer">حسابي</li>
                     <li className="hover:text-black cursor-pointer">
-                        
-                        <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink> 
+                        <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink>
                     </li>
                     <li className="hover:text-black cursor-pointer">
                         <NavLink to={"/Subscribe"}>الإشتراك كستنر</NavLink>
@@ -68,7 +67,9 @@ const Navbar = () => {
                         {/* Dropdown menu */}
                         <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg ">
                             <li className="px-4 py-2 hover:bg-gray-100">
+                                <NavLink to={"/Courses-View"}>
                                 كورسات مسجلة
+                                </NavLink>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
                                 <NavLink to={"/For_students"}>
@@ -76,17 +77,13 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                            <NavLink to={"/Qatar"}>
-
-                                النظام القطري
-                                </NavLink>
-
+                                <NavLink to={"/Qatar"}>النظام القطري</NavLink>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
                                 أماكن تعليمية
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                            <NavLink to={"/Blog"} >مدونة خصوصي</NavLink>    
+                                <NavLink to={"/Blog"}>مدونة خصوصي</NavLink>
                             </li>
                         </ul>
                     </li>
