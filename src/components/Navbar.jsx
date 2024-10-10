@@ -51,7 +51,10 @@ const Navbar = () => {
 
                 {/* Right Side: Menu in Arabic */}
                 <ul className="flex space-x-6 text-gray-700 text-sm">
-                    <li className="hover:text-black cursor-pointer">حسابي</li>
+                    <li className="hover:text-black cursor-pointer">
+                    <NavLink to={"/Account"}> حسابي</NavLink> 
+
+                    </li>
                     <li className="hover:text-black cursor-pointer">
                         
                         <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink> 
