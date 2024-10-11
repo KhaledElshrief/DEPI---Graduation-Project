@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App";
 import {
     FaFacebookF,
@@ -8,8 +8,31 @@ import {
     FaWhatsapp,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../Redux/Actions/AuthAction";
 
 const Navbar = () => {
+    const dispatch = useDispatch(); 
+    const [load, setLoad] = useState(true);
+    const [token, setToken] = useState(localStorage.getItem("token"));
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        setLoad(true);
+        dispatch(logout); 
+        setToken("");
+        setLoad(false);
+    };
+
+    const data=useSelector((state)=>state.authReducer.loginuser);
+  
+
+
+    useEffect(() => {
+ 
+    }, [load]);
+
     return (
         <nav className="w-full bg-white shadow-lg font-bold">
             <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
@@ -52,12 +75,14 @@ const Navbar = () => {
                 {/* Right Side: Menu in Arabic */}
                 <ul className="flex space-x-6 text-gray-700 text-sm">
                     <li className="hover:text-black cursor-pointer">
-                    <NavLink to={"/Account"}> حسابي</NavLink> 
-
+                        {data ? (
+                            <Button onClick={handleLogout}>تسجيل خروج</Button>
+                        ) : (
+                            <NavLink to={"/Account"}>حسابي</NavLink>
+                        )}
                     </li>
                     <li className="hover:text-black cursor-pointer">
-                        
-                        <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink> 
+                        <NavLink to={"/whokhososy"}>مين خصوصى؟</NavLink>
                     </li>
                     <li className="hover:text-black cursor-pointer">
                         <NavLink to={"/Subscribe"}>الإشتراك كستنر</NavLink>
@@ -66,30 +91,20 @@ const Navbar = () => {
                         <NavLink to={"/WorkAsTeacher"}>العمل كمعلم</NavLink>
                     </li>
                     {/* Dropdown for الطلاب */}
-                    <li className="relative group hover:text-black cursor-pointer ">
+                    <li className="relative group hover:text-black cursor-pointer">
                         للطلاب
                         {/* Dropdown menu */}
-                        <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg ">
+                        <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg">
+                            <li className="px-4 py-2 hover:bg-gray-100">كورسات مسجلة</li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                                كورسات مسجلة
+                                <NavLink to={"/For_students"}>النظام المصري</NavLink>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                                <NavLink to={"/For_students"}>
-                                    النظام المصري
-                                </NavLink>
+                                <NavLink to={"/Qatar"}>النظام القطري</NavLink>
                             </li>
+                            <li className="px-4 py-2 hover:bg-gray-100">أماكن تعليمية</li>
                             <li className="px-4 py-2 hover:bg-gray-100">
-                            <NavLink to={"/Qatar"}>
-
-                                النظام القطري
-                                </NavLink>
-
-                            </li>
-                            <li className="px-4 py-2 hover:bg-gray-100">
-                                أماكن تعليمية
-                            </li>
-                            <li className="px-4 py-2 hover:bg-gray-100">
-                            <NavLink to={"/Blog"} >مدونة خصوصي</NavLink>    
+                                <NavLink to={"/Blog"}>مدونة خصوصي</NavLink>
                             </li>
                         </ul>
                     </li>
@@ -100,9 +115,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className="flex items-center space-x-2">
-                    <img className="w-150 h-10   " src="./images/logo.png" />
-                    {/* <span className="text-red-600 text-xl font-bold">KHOSOSY</span>
-          <span className="text-orange-500 text-xl font-bold">.net</span> */}
+                    <img className="w-150 h-10" src="./images/logo.png" alt="logo" />
                 </div>
             </div>
         </nav>
