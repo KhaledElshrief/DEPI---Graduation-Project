@@ -52,8 +52,8 @@ const signup=asyncHandler(async(req,res,next)=>{
 
 
 const login=asyncHandler(async(req,res,next)=>{
-    const user=await userModel.findOne({eamil:req.body.eamil})
-
+    const user=await userModel.findOne({email:req.body.email})
+  
     if(!user||!(await bcryp.compare(req.body.password,user.password))){
         return next(new apiError("email or password are not correct",400))
     }

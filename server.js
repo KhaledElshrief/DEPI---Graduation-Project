@@ -7,6 +7,7 @@ const mainRoute = require("./routes/mainRoute");
 const dbConnection = require("./config/dbConnetions");
 const path = require("path");
 const bodyParser = require('body-parser')
+const cors = require('cors');
 
 
 
@@ -15,6 +16,7 @@ app.use(express.static(path.join(__dirname,"uploads")))
 
 app.use(bodyParser.urlencoded({ extended: false })) 
 
+app.use(cors());
 dotenv.config({path:"config.env"})
 app.use(express.json())
 dbConnection();
@@ -23,7 +25,7 @@ dbConnection();
  app.listen(process.env.PORT,()=>{
     console.log(`app listen on port ${process.env.PORT}`)
  })
-
+ 
 mainRoute(app);
 
 app.use("*",(req,res,next)=>{

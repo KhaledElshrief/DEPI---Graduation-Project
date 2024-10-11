@@ -51,7 +51,11 @@ const coureSchema=mongoose.Schema({
     user:{
         type:mongoose.Schema.ObjectId,
         required:[true,"user is required"]
-    }
+    },
+    discount:{
+        type:Number
+    },
+    
 
 })
 
