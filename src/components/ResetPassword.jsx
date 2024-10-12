@@ -37,6 +37,7 @@ const ResetPassword = () => {
             });
 
             const result = await response.json();
+            console.log("J")
 
             if (response.ok) {
                 notify("تم إعادة تعيين كلمة المرور بنجاح", "success");
