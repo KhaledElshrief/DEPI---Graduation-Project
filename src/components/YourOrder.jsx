@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function YourOrder() {
+export default function YourOrder({ cartItems, totalPrice }) {
   return (
     <section className="YourOrder text-center">
       <h2 className="mb-5">طلبك</h2>
@@ -10,23 +10,23 @@ export default function YourOrder() {
         <p className="col col-5">السعر</p>
       </div>
       <hr />
-      <Order />
-      <Order />
-      <Order />
+      {cartItems.map((item) => (
+        <Order key={item.id} item={item} />
+      ))}
       <hr />
       <div className="row">
         <p className="col col-7">اجمال السعر</p>
-        <p className="col col-5">1000 جنيها</p>
+        <p className="col col-5">{totalPrice} جنيها</p>
       </div>
       <hr />
     </section>
   );
 }
-function Order() {
+function Order({ item }) {
   return (
     <div className="row Order">
-      <p className="col col-7">منتج جامد فشخ</p>
-      <p className="col col-5">300 جنيها</p>
+      <p className="col col-7">{item.title}</p>
+      <p className="col col-5">{item.price} جنيها</p>
     </div>
   );
 }

@@ -454,6 +454,12 @@ textarea {
 .PaymentMethod input {
   margin: 20px 7px;
 }
+.delItem {
+  cursor: pointer;
+}
+.delItem:hover {
+  color: #fcb408;
+}
 /*  */
 /*  */
 /*  */
