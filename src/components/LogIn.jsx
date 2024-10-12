@@ -44,6 +44,22 @@ const LogIn = () => {
     setName("")
     setPassword("")
     setEmail("")
+
+       
+//     if(data){
+           
+//       console.log("j")
+//     if( data.status==200 ){
+//         notify("تم الدخول بحسابك   ","success")
+//         localStorage.setItem("token",data.data.token)
+        
+//     }
+//     else{
+
+        
+//         notify( `${data.data.message}`,"error")
+//     }
+// }
    
 
     // Debugging: check if the FormData is populated correctly
@@ -54,20 +70,40 @@ const LogIn = () => {
        
   };
   
-useEffect(()=>{
 
+
+useEffect(()=>{  
+     
 if(data){
  
-    if( data.status==200 ){
-        notify("تم الدخول بحسابك   ","success")
-        localStorage.setItem("token",data.data.token)
-        
-    }
-    else{
-        
-        notify( `${data.data.message}`,"error")
-    }
+
+  if( data.status==200 ){
+
+    notify("تم الدخول بحسابك   ","success")
+    localStorage.setItem("token",data.data.token)
+     setTimeout(() => {
+      // window.location.reload();
+      navigate("/");
+      
+    }, 2000);
+   
+
+  
+    
 }
+else{
+    if(data?.status!=200){
+     setTimeout(() => {
+      notify( `${data.data.message}`,"error")
+     }, 100);
+    }
+    
+}
+}
+
+
+
+
 },[load])
 
 
@@ -141,12 +177,16 @@ if(data){
                   </Form.Group>
 
                   <Button onClick={submitSignUp} variant="primary" type="submit" className="w-100 mt-3">
-                    دخول
-                  </Button>
+  دخول
+</Button>
 
-                  <Button variant="link" onClick={handleSignUp} className="w-100 mt-2">
-                    انشاء حساب
-                  </Button>
+<Button variant="link" onClick={handleSignUp} className="w-100 mt-2">
+  انشاء حساب
+</Button>
+
+<a className="forgot-password-link"  href="/Forgetpassword">
+        هل نسيت كلمه المرور؟
+      </a>
                 </Form>
               </div>
             </Col>

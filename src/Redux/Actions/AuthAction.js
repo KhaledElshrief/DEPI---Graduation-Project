@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useInsetData, useInsetDataWithImage } from "../../Hooks/UseInsertData";
-import { LOGIN_USER, LOGIN_USER2 } from "../Type";
+import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER } from "../Type";
 import BaseUrl from "../../Api/BaseUrl";
 
 
@@ -17,7 +17,7 @@ export const loginUser=(data)=>async(dispatch)=>{
         dispatch({
             type: LOGIN_USER,
             payload: response,
-            loading:true
+            loading:false
         })
     }
     catch(e){
@@ -45,7 +45,7 @@ export const loginUser2=(data)=>async(dispatch)=>{
         dispatch({
             type: LOGIN_USER2,
             payload: response,
-            loading:true
+            loading:false
         })
     }
     catch(e){
@@ -53,6 +53,27 @@ export const loginUser2=(data)=>async(dispatch)=>{
         dispatch({
             type: LOGIN_USER2,
             payload: e.response,
+            
+        })
+    }
+
+}
+
+export const logout=async(dispatch)=>{
+
+    try{
+      
+        dispatch({
+            type: LOGOUT_USER,
+            payload: '',
+            loading:false
+        })
+    }
+    catch(e){
+       
+        dispatch({
+            type: LOGOUT_USER,
+            payload: '',
             
         })
     }
