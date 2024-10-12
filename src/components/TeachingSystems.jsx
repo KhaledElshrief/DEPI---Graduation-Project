@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function TeachingSystems() {
   return (
@@ -25,9 +26,9 @@ export default function TeachingSystems() {
           <p>✔️ تحميل الدورة</p>
           <p>✔️ يتم الموافقة عليها</p>
           <p>✔️ متابعة مبيعات الدورة مع الإدارة</p>
-          <a className="btn btn-warning mt-3" href="#">
+          <Link className="btn btn-warning mt-3" to={"/Account"}>
             تسجيل دخول
-          </a>
+          </Link>
         </div>
       </div>
       <p>لمعرفة الشروط العمل كمعلم برجاء قراءة أتفاقية المعلمين و الشركاء</p>

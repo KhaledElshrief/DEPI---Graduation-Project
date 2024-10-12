@@ -28,7 +28,7 @@ export default function SubPlans() {
             </ul>
             <p
               className="btn btn-warning mb-2"
-              onClick={() => window.scrollTo({ top: 2900, behavior: "smooth" })}
+              onClick={() => window.scrollTo({ top: 2600, behavior: "smooth" })}
             >
               الاشتراك
             </p>
@@ -62,7 +62,7 @@ export default function SubPlans() {
             </ul>
             <p
               className="btn btn-warning mb-2"
-              onClick={() => window.scrollTo({ top: 2900, behavior: "smooth" })}
+              onClick={() => window.scrollTo({ top: 2600, behavior: "smooth" })}
             >
               الاشتراك
             </p>
@@ -91,7 +91,7 @@ export default function SubPlans() {
             </ul>
             <p
               className="btn btn-warning mb-2"
-              onClick={() => window.scrollTo({ top: 2900, behavior: "smooth" })}
+              onClick={() => window.scrollTo({ top: 2600, behavior: "smooth" })}
             >
               الاشتراك
             </p>
