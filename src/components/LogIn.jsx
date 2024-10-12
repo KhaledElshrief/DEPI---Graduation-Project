@@ -177,12 +177,16 @@ else{
                   </Form.Group>
 
                   <Button onClick={submitSignUp} variant="primary" type="submit" className="w-100 mt-3">
-                    دخول
-                  </Button>
+  دخول
+</Button>
 
-                  <Button variant="link" onClick={handleSignUp} className="w-100 mt-2">
-                    انشاء حساب
-                  </Button>
+<Button variant="link" onClick={handleSignUp} className="w-100 mt-2">
+  انشاء حساب
+</Button>
+
+<a className="forgot-password-link"  href="/Forgetpassword">
+        هل نسيت كلمه المرور؟
+      </a>
                 </Form>
               </div>
             </Col>

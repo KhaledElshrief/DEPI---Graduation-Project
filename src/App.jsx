@@ -15,6 +15,11 @@ import TechnologyTools from "./components/TechnologyTools";
 import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
 import Account from "./pages/Account";
+import ForgetPasswordPage from "./pages/ForgetPasswordPage";
+import VerifyResetCodePage from "./pages/VerifyResetCodePage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+
+
 const App = () => {
     return (
         <>
@@ -43,6 +48,9 @@ const App = () => {
                         <Route path="/NewLearning" element={<NewLearning />}></Route>
                         <Route path="/LearningSys" element={<LearningSys />}></Route>
                         <Route path="/Account" element={<Account></Account>}></Route>
+                        <Route path="/Forgetpassword" element={<ForgetPasswordPage></ForgetPasswordPage>}></Route>
+                        <Route path="/verifyresetcodepage" element={<VerifyResetCodePage></VerifyResetCodePage>}></Route>
+                        <Route path="/resetpassword" element={<ResetPasswordPage></ResetPasswordPage>}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
