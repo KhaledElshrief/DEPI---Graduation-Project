@@ -155,7 +155,7 @@ const allowedTo=(...roles)=>{
     })
 
     if(!user){
-        return next(new apiError("resetCode is invilid or expire "))
+        return next(new apiError(" الكود غير صحيح او منتهى الصلاحيه "))
     }
     user.passwordResetVerified=true,
     await user.save();

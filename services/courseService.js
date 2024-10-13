@@ -33,7 +33,7 @@ const reasizeImage=asyncHandler( async (req,res,next)=>{
 
  const createCours=asyncHandler(async(req,res,next)=>{
     req.body.user=req.currentUser;
-
+console.log("jj")
     const data=await courseModel.create(req.body);
     if(!data){
         return next(new apiError("there is an error on creating courese",400));
@@ -50,6 +50,14 @@ const reasizeImage=asyncHandler( async (req,res,next)=>{
     }
     res.status(200).json({status:"success",length:data.length,data:data});
 
+ })
+
+ const AllCourses  =asyncHandler(async(req,res,next)=>{
+    const data=await courseModel.find();
+    if(!data){
+        return next (new apiError("there is no data on courses",400));
+    }
+    res.status(200).json({status:"success",length:data.length,data:data});
  })
 
  const getSpecificData=asyncHandler(async(req,res,next)=>{
@@ -86,5 +94,5 @@ const reasizeImage=asyncHandler( async (req,res,next)=>{
 
  
 
- module.exports= {getSpecificData,getAllCourses,createCours,reasizeImage,uploadImage,deleteCourse,updataCourse}
+ module.exports= {getSpecificData,getAllCourses,createCours,reasizeImage,uploadImage,deleteCourse,updataCourse,AllCourses}
  

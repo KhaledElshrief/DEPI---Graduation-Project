@@ -8,6 +8,7 @@ const dbConnection = require("./config/dbConnetions");
 const path = require("path");
 const bodyParser = require('body-parser')
 const cors = require('cors');
+const { getAllCourses } = require("./services/courseService");
 
 
 
@@ -17,10 +18,10 @@ app.use(express.static(path.join(__dirname,"uploads")))
 app.use(bodyParser.urlencoded({ extended: false })) 
 
 app.use(cors());
+app.use("/getallcourses",getAllCourses)
 dotenv.config({path:"config.env"})
 app.use(express.json())
 dbConnection();
-
 
  app.listen(process.env.PORT,()=>{
     console.log(`app listen on port ${process.env.PORT}`)
@@ -29,7 +30,7 @@ dbConnection();
 mainRoute(app);
 
 app.use("*",(req,res,next)=>{
-    next (new apiError(`cant find this url ${req.originalUrl}`,400)) 
+    next (new apiError(`cant find this url ${req.originalUrl}`,400))
 })
 
  app.use(globalError);
