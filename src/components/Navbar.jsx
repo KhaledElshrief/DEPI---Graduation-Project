@@ -95,7 +95,10 @@ const Navbar = () => {
                         للطلاب
                         {/* Dropdown menu */}
                         <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg">
+                            <NavLink to={"/courses"}>
                             <li className="px-4 py-2 hover:bg-gray-100">كورسات مسجلة</li>
+                            </NavLink>
+                            
                             <li className="px-4 py-2 hover:bg-gray-100">
                                 <NavLink to={"/For_students"}>النظام المصري</NavLink>
                             </li>

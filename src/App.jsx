@@ -18,44 +18,48 @@ import Account from "./pages/Account";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import VerifyResetCodePage from "./pages/VerifyResetCodePage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
-
+import CoursesPage from "./pages/CoursesPage";
 
 const App = () => {
-    return (
-        <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<MyHome />} />
-                        <Route path="/Subscribe" element={<Subscribe />} />
-                        <Route
-                            path="/WorkAsTeacher"
-                            element={<WorkAsTeacher />}
-                        />
-                        <Route path="For_students" element={<For_students />} />
-                        <Route path="/Qatar" element={<QatarPage />} />
-                        <Route
-                            path="/For_students/Group"
-                            element={<GroupsPage />}
-                        />
-                        <Route
-                            path="/For_students/Private"
-                            element={<Private />}
-                        ></Route>
-                        <Route path="/whokhososy" element={<WhoKhososy/>}></Route>
-                        <Route path="/Blog" element={<BlogCardsContainer />}></Route>
-                        <Route path="/TechTools" element={<TechnologyTools />}></Route>
-                        <Route path="/NewLearning" element={<NewLearning />}></Route>
-                        <Route path="/LearningSys" element={<LearningSys />}></Route>
-                        <Route path="/Account" element={<Account></Account>}></Route>
-                        <Route path="/Forgetpassword" element={<ForgetPasswordPage></ForgetPasswordPage>}></Route>
-                        <Route path="/verifyresetcodepage" element={<VerifyResetCodePage></VerifyResetCodePage>}></Route>
-                        <Route path="/resetpassword" element={<ResetPasswordPage></ResetPasswordPage>}></Route>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </>
-    );
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MyHome />} />
+            <Route path="/Subscribe" element={<Subscribe />} />
+            <Route path="/WorkAsTeacher" element={<WorkAsTeacher />} />
+            <Route path="For_students" element={<For_students />} />
+            <Route path="/Qatar" element={<QatarPage />} />
+            <Route path="/For_students/Group" element={<GroupsPage />} />
+            <Route path="/For_students/Private" element={<Private />}></Route>
+            <Route path="/whokhososy" element={<WhoKhososy />}></Route>
+            <Route path="/Blog" element={<BlogCardsContainer />}></Route>
+            <Route path="/TechTools" element={<TechnologyTools />}></Route>
+            <Route path="/NewLearning" element={<NewLearning />}></Route>
+            <Route path="/LearningSys" element={<LearningSys />}></Route>
+            <Route path="/Account" element={<Account></Account>}></Route>
+            <Route
+              path="/Forgetpassword"
+              element={<ForgetPasswordPage></ForgetPasswordPage>}
+            ></Route>
+            <Route
+              path="/verifyresetcodepage"
+              element={<VerifyResetCodePage></VerifyResetCodePage>}
+            ></Route>
+            <Route
+              path="/resetpassword"
+              element={<ResetPasswordPage></ResetPasswordPage>}
+            ></Route>
+            <Route
+              path="/courses"
+              element={<CoursesPage/>}
+            ></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;

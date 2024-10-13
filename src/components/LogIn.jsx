@@ -85,7 +85,7 @@ const LogIn = () => {
     await dispatch(loginUser2(data));
     setload(false);
   };
-
+console.log(data)
   return (
     <div>
       {log ? (
