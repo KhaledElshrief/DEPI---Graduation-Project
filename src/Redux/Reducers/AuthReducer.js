@@ -1,7 +1,8 @@
-import { LOGIN_USER,LOGIN_USER2,LOGOUT_USER } from "../Type";
+import { LOGIN_USER,LOGIN_USER2,LOGOUT_USER,ERROR } from "../Type";
 const initail={
     loginuser:'',
-    loginuser2:''
+    loginuser2:'',
+    error:''
 }
 
 const authReducer=(State=initail,action)=>{
@@ -18,6 +19,13 @@ const authReducer=(State=initail,action)=>{
                     return{
                         loginuser:action.payload
                     }
+                    case ERROR :
+                    return{
+                        loginuser:'',
+                        error:action.payload
+                        
+                    }
+
     
             default:
                 return State;
