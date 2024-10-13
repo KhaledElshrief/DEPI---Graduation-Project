@@ -19,6 +19,7 @@ import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import VerifyResetCodePage from "./pages/VerifyResetCodePage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import CoursesPage from "./pages/CoursesPage";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/NewLearning" element={<NewLearning />}></Route>
             <Route path="/LearningSys" element={<LearningSys />}></Route>
             <Route path="/Account" element={<Account></Account>}></Route>
+            <Route path="/Cart" element={<Cart />} />
             <Route
               path="/Forgetpassword"
               element={<ForgetPasswordPage></ForgetPasswordPage>}
@@ -51,10 +53,7 @@ const App = () => {
               path="/resetpassword"
               element={<ResetPasswordPage></ResetPasswordPage>}
             ></Route>
-            <Route
-              path="/courses"
-              element={<CoursesPage/>}
-            ></Route>
+            <Route path="/courses" element={<CoursesPage />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
