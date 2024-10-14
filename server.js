@@ -11,8 +11,6 @@ const cors = require('cors');
 const { getAllCourses } = require("./services/courseService");
 
 
-
-
 app.use(express.static(path.join(__dirname,"uploads")))
 
 app.use(bodyParser.urlencoded({ extended: false })) 
