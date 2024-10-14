@@ -27,6 +27,7 @@ dbConnection();
  
 mainRoute(app);
 
+
 app.use("*",(req,res,next)=>{
     next (new apiError(`cant find this url ${req.originalUrl}`,400))
 })

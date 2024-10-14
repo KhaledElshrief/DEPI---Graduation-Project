@@ -15,7 +15,6 @@ router.route("/:id").get(getSpecificData)
 
 
 
-
 module.exports=router;
 
 

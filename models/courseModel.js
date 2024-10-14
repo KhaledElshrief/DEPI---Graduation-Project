@@ -42,12 +42,12 @@ const coureSchema=mongoose.Schema({
         required:[true,"language is required"],
 
     },
-    category:{
-        type:String,
-        require:[true,"category is required"],
+    // category:{
+    //     type:String,
+    //     require:[true,"category is required"],
 
 
-    },
+    // },
     user:{
         type:mongoose.Schema.ObjectId,
         required:[true,"user is required"]
