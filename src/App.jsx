@@ -20,6 +20,7 @@ import VerifyResetCodePage from "./pages/VerifyResetCodePage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import CoursesPage from "./pages/CoursesPage";
 import Cart from "./pages/Cart";
+import CourseDetails from "./pages/CourseDetails";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/LearningSys" element={<LearningSys />}></Route>
             <Route path="/Account" element={<Account></Account>}></Route>
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/CourseDetails" element={<CourseDetails />} />
             <Route
               path="/Forgetpassword"
               element={<ForgetPasswordPage></ForgetPasswordPage>}
