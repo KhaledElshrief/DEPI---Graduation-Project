@@ -15,54 +15,32 @@ import TechnologyTools from "./components/TechnologyTools";
 import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
 import CoursesView from "./pages/CoursesView";
+import AdminUsers from "./pages/AdminUsers";
 const App = () => {
-    return (
-        <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<MyHome />} />
-                        <Route path="/Subscribe" element={<Subscribe />} />
-                        <Route
-                            path="/WorkAsTeacher"
-                            element={<WorkAsTeacher />}
-                        />
-                        <Route path="For_students" element={<For_students />} />
-                        <Route path="/Qatar" element={<QatarPage />} />
-                        <Route
-                            path="/For_students/Group"
-                            element={<GroupsPage />}
-                        />
-                        <Route
-                            path="/For_students/Private"
-                            element={<Private />}
-                        ></Route>
-                        <Route
-                            path="/whokhososy"
-                            element={<WhoKhososy />}
-                        ></Route>
-                        <Route
-                            path="/Blog"
-                            element={<BlogCardsContainer />}
-                        ></Route>
-                        <Route
-                            path="/TechTools"
-                            element={<TechnologyTools />}
-                        ></Route>
-                        <Route
-                            path="/NewLearning"
-                            element={<NewLearning />}
-                        ></Route>
-                        <Route
-                            path="/LearningSys"
-                            element={<LearningSys />}
-                        ></Route>
-                        <Route path="/Courses-view" element={<CoursesView />}></Route>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </>
-    );
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MyHome />} />
+            <Route path="/Subscribe" element={<Subscribe />} />
+            <Route path="/WorkAsTeacher" element={<WorkAsTeacher />} />
+            <Route path="For_students" element={<For_students />} />
+            <Route path="/Qatar" element={<QatarPage />} />
+            <Route path="/For_students/Group" element={<GroupsPage />} />
+            <Route path="/For_students/Private" element={<Private />}></Route>
+            <Route path="/whokhososy" element={<WhoKhososy />}></Route>
+            <Route path="/Blog" element={<BlogCardsContainer />}></Route>
+            <Route path="/TechTools" element={<TechnologyTools />}></Route>
+            <Route path="/NewLearning" element={<NewLearning />}></Route>
+            <Route path="/LearningSys" element={<LearningSys />}></Route>
+            <Route path="/Courses-view" element={<CoursesView />}></Route>
+            <Route path="/admin-users" element={<AdminUsers/>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;

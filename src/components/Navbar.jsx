@@ -7,6 +7,7 @@ import {
     FaLinkedinIn,
     FaWhatsapp,
 } from "react-icons/fa";
+import { GrUserAdmin } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -68,7 +69,7 @@ const Navbar = () => {
                         <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg ">
                             <li className="px-4 py-2 hover:bg-gray-100">
                                 <NavLink to={"/Courses-View"}>
-                                كورسات مسجلة
+                                    كورسات مسجلة
                                 </NavLink>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-100">
@@ -92,6 +93,14 @@ const Navbar = () => {
                         <NavLink to={"/"}>الرئيسية</NavLink>
                     </li>
                 </ul>
+
+                {/* User Admin Icon */}
+                <NavLink to={"/admin-users"}>
+                    <div className="flex items-center justify-center gap-2 cursor-pointer hover:scale-110 transition duration-300">
+                        <GrUserAdmin className="h-6 w-6 m-0 " />
+                        <p>Admin</p>
+                    </div>
+                </NavLink>
 
                 <div className="flex items-center space-x-2">
                     <img className="w-150 h-10   " src="./images/logo.png" />
