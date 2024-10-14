@@ -18,6 +18,7 @@ import Account from "./pages/Account";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import VerifyResetCodePage from "./pages/VerifyResetCodePage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
+import CoursesPage from "./pages/CoursesPage";
 
 
 const App = () => {
@@ -51,6 +52,10 @@ const App = () => {
                         <Route path="/Forgetpassword" element={<ForgetPasswordPage></ForgetPasswordPage>}></Route>
                         <Route path="/verifyresetcodepage" element={<VerifyResetCodePage></VerifyResetCodePage>}></Route>
                         <Route path="/resetpassword" element={<ResetPasswordPage></ResetPasswordPage>}></Route>
+                        <Route
+              path="/courses"
+              element={<CoursesPage/>}
+            ></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

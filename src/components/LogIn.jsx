@@ -71,40 +71,26 @@ const LogIn = () => {
   };
   
 
-
-useEffect(()=>{  
-     
-if(data){
- 
-
-  if( data.status==200 ){
-
-    notify("تم الدخول بحسابك   ","success")
-    localStorage.setItem("token",data.data.token)
-     setTimeout(() => {
-      // window.location.reload();
-      navigate("/");
-      
-    }, 2000);
-   
-
+  useEffect(() => {  
+    if (data) {
+      // Clear previous toasts
+      toast.dismiss();
   
-    
-}
-else{
-    if(data?.status!=200){
-     setTimeout(() => {
-      notify( `${data.data.message}`,"error")
-     }, 100);
+      if (data.status === 200) {
+        notify("تم الدخول بحسابك", "success");
+        localStorage.setItem("token", data.data.token);
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      } else {
+        
+        setTimeout(() => {
+          notify(`${data.data.message}`, "error");
+        }, 100); 
+      }
     }
-    
-}
-}
-
-
-
-
-},[load])
+  }, [load]);
+  
 
 
 
@@ -118,9 +104,9 @@ else{
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    setImage(file); // Store the image file in the state
+    setImage(file); 
   };
-
+        
 
   const submitSignUp= async(e)=>{
     console.log("j")

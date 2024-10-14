@@ -24,4 +24,6 @@ const useInsetDataWithImage=async(url,parmas)=>{
 }
 
 
+
+
 export  {useInsetDataWithImage,useInsetData}

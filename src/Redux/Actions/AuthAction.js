@@ -37,8 +37,8 @@ export const loginUser2=(data)=>async(dispatch)=>{
     try{
      
         const response =await  BaseUrl.post("/auth/login",data)
-        console.log("jjj",response)
-         console.log(response.data.data)     
+
+     
 
 
       
@@ -59,6 +59,7 @@ export const loginUser2=(data)=>async(dispatch)=>{
 
 }
 
+
 export const logout=async(dispatch)=>{
 
     try{
@@ -77,7 +78,6 @@ export const logout=async(dispatch)=>{
             
         })
     }
-
 }
 
 

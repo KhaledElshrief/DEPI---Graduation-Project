@@ -75,7 +75,7 @@ const Navbar = () => {
                 {/* Right Side: Menu in Arabic */}
                 <ul className="flex space-x-6 text-gray-700 text-sm">
                     <li className="hover:text-black cursor-pointer">
-                        {data ? (
+                        {data?.status==200 ? (
                             <Button onClick={handleLogout}>تسجيل خروج</Button>
                         ) : (
                             <NavLink to={"/Account"}>حسابي</NavLink>
@@ -95,7 +95,9 @@ const Navbar = () => {
                         للطلاب
                         {/* Dropdown menu */}
                         <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg">
+                        <NavLink to={"/courses"}>
                             <li className="px-4 py-2 hover:bg-gray-100">كورسات مسجلة</li>
+                            </NavLink>
                             <li className="px-4 py-2 hover:bg-gray-100">
                                 <NavLink to={"/For_students"}>النظام المصري</NavLink>
                             </li>
