@@ -14,6 +14,9 @@ import BlogCardsContainer from "./components/BlogCardsContainer";
 import TechnologyTools from "./components/TechnologyTools";
 import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Teachers from "./components/Teachers";
 const App = () => {
     return (
         <>
@@ -41,9 +44,11 @@ const App = () => {
                         <Route path="/TechTools" element={<TechnologyTools />}></Route>
                         <Route path="/NewLearning" element={<NewLearning />}></Route>
                         <Route path="/LearningSys" element={<LearningSys />}></Route>
+                        <Route path="/Teachers" element={<Teachers />}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
+
         </>
     );
 };
