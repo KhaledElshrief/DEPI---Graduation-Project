@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import React from 'react';
 
 const Courses = () => {
@@ -28,9 +29,12 @@ const Courses = () => {
             دورات جميع المواد و أمتحانات و بنك أسئلة.
           </p>
           {/* Call to Action Button */}
-          <button className="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition duration-300 flex justify-center items-center">
-            تصفح الدورات
-          </button>
+          <Link to="/locations">
+            <button className="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition duration-300 flex justify-center items-center">
+              تصفح الدورات
+            </button>
+          </Link>
+         
         </div>
       </div>
     </section>
