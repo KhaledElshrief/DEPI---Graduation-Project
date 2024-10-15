@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter,useParams } from "react-router-dom";
 import Layout from "./pages/Layout";
 import MyHome from "./pages/MyHome";
 import Subscribe from "./pages/Subscribe";
@@ -16,6 +16,9 @@ import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
 import CoursesView from "./pages/CoursesView";
 import AdminUsers from "./pages/AdminUsers";
+import AdminCourses from "./pages/AdminCourses.jsx";
+import AdminFeedBack from "./pages/AdminFeedBack";
+import SingleUser from "./pages/SingleUser.jsx";
 const App = () => {
   return (
     <>
@@ -36,6 +39,9 @@ const App = () => {
             <Route path="/LearningSys" element={<LearningSys />}></Route>
             <Route path="/Courses-view" element={<CoursesView />}></Route>
             <Route path="/admin-users" element={<AdminUsers/>}></Route>
+            <Route path="/admin-users:id" element={<SingleUser/>}></Route>
+            <Route path="/admin-courses" element={<AdminCourses/>}></Route>
+            <Route path="/admin-feedback" element={<AdminFeedBack/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
