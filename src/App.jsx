@@ -39,7 +39,7 @@ const App = () => {
             <Route path="/LearningSys" element={<LearningSys />}></Route>
             <Route path="/Courses-view" element={<CoursesView />}></Route>
             <Route path="/admin-users" element={<AdminUsers/>}></Route>
-            <Route path="/admin-users:id" element={<SingleUser/>}></Route>
+            <Route path="/admin-users/:id" element={<SingleUser/>}></Route>
             <Route path="/admin-courses" element={<AdminCourses/>}></Route>
             <Route path="/admin-feedback" element={<AdminFeedBack/>}></Route>
           </Route>

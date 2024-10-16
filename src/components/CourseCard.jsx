@@ -4,7 +4,7 @@ function deleteCourse(id) {}
 function updateCourse(id) {}
 const CourseCard = ({ id, name, price, content, imgsrc }) => {
     return (
-        <Card sx={{ minWidth: 500, height: 230, display: "flex" }}>
+        <Card sx={{ minWidth: 500, height: 230, display: "flex" , ml: 3}}>
             <CardContent>
                 <Typography variant="h5" gutterBottom>
                     Course ID: {id}teCo
@@ -39,6 +39,8 @@ const CourseCard = ({ id, name, price, content, imgsrc }) => {
                 <img src={imgsrc} alt="صورة الكورس" />
             </div>
         </Card>
+        
+        
     );
 };
 export default CourseCard;

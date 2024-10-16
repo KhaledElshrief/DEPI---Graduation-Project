@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 const SingleUser = () => {
-    let { id } = useParams();
+    const { id } = useParams();
+    console.log(id);
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
     useEffect(() => {

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import AdminSideBar from "../components/AdminSideBar";
 import User from "../components/UserCard";
+import axios from "axios";
+
 // Defining Delete Function
 
 const AdminUsers = () => {
@@ -11,17 +13,19 @@ const AdminUsers = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch(
-                    "https://jsonplaceholder.typicode.com/todos"
+                const response = await axios.get(
+                    "https://e-commerce-3-gu5g.onrender.com/user"
                 );
-                const data = await response.json();
+                const data = await response.data;
                 setUsers(data);
-                Object.values(users);
+                console.log(Object.values(data));
                 setLoading(false);
-            } catch {
-                console.log("error");
+            } catch (error) {
+                console.error("Error fetching users:", error);
+                setLoading(false);
             }
         };
+
         fetchUsers();
     }, []);
 
