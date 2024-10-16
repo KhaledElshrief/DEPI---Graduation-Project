@@ -13,11 +13,13 @@ const CoursesPage = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch('http://localhost:8000/course');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
+        const response = await fetch('https://e-commerce-3-gu5g.onrender.com/course/');
+        // if (!response.ok) {
+        //   throw new Error('Network response was not ok');
+        // }
+        //console.log(response)
+        const data = await response.data.data;
+        console.log(data)
         setCourses(data);
         setFilteredCourses(data);
         setIsLoading(false);
