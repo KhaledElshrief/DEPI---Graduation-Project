@@ -414,6 +414,13 @@ textarea:focus {
   min-height: 200px;
   padding: 30px;
   margin-bottom: 50px;
+  color: black;
+}
+.right p {
+  color: black;
+}
+.cart p {
+  color: black;
 }
 .itemInfo {
   display: flex;
