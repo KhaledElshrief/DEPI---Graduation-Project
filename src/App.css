@@ -1,0 +1,10 @@
+body {
+    font-family: "Droid Arabic Kufi";
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,81 @@
+/* Global Variables */
+:root {
+    --primary-color: #fcad1a;
+    --secondary-color: #2c2c2c;
+    --third-color: #e0e0e0;
+    /* Font Variables */
+    --font-family: cairo;
+    --font-size: 16px;
+}
+/* End Global Variables */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    position: relative;
+    box-sizing: border-box;
+}
+.container {
+    margin-inline: auto;
+    width: auto;
+    max-width: 1200px;
+}
+header {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    display: inline-block;
+    margin-block: 70px 20px;
+}
+
+.forstudents .cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+.cards div {
+    border-radius: 20px;
+    background-color: var(--third-color);
+}
+.cards > div {
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+.cards > div:hover {
+    border-style: solid;
+    border-color: var(--primary-color);
+    box-sizing: border-box;
+    transform: scale(1.05);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+        rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+        rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.cards .img img {
+    padding-inline: 40px;
+    width: 300px;
+    height: auto;
+    border-radius: 60px;
+}
+.cards .private img {
+    border-radius: 100px;
+}
+.cards .txt {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 900;
+    margin-block: 20px;
+}

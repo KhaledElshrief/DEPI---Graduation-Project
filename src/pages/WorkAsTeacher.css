@@ -1,0 +1,506 @@
+@font-face {
+  font-family: arabic;
+  src: url("./Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: arabic, sans-serif;
+  color: #273044;
+}
+/* components الصفحة الاولي كانت معمولة من غير ريأكت فمش متقسمة */
+p {
+  font-size: medium;
+  margin: 0%;
+}
+h5 {
+  font-size: medium;
+  font-weight: 700;
+}
+main {
+  margin-top: 100px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.content {
+  margin-top: 50px;
+  align-items: end;
+}
+.right {
+  width: 40%;
+  direction: rtl;
+}
+.left {
+  width: 50%;
+}
+.one {
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  width: 95%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+h3 {
+  font-weight: 800;
+}
+.courses {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.course a {
+  text-decoration: none;
+  color: black;
+}
+.course {
+  border-radius: 20px;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+.card-body {
+  padding: 20px;
+  direction: rtl;
+}
+.soft {
+  color: rgba(106, 104, 104, 0.463);
+  direction: rtl;
+}
+.course a:hover {
+  color: blue;
+  transition: 0.3s;
+}
+.course img:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+.two {
+  direction: rtl;
+  margin-top: 80px;
+}
+.system {
+  justify-content: space-between;
+  align-items: center;
+}
+.system div {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 30px 10px;
+  margin: 20px;
+  width: 46%;
+}
+.system div .btn {
+  padding: 5px 30px;
+  border-radius: 25px;
+  font-weight: 800;
+  margin-top: 30px;
+  border: solid 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.system div .button,
+.btn:hover {
+  background-color: rgb(1, 1, 11);
+  transition: 0.3s;
+  color: #f5f5f5;
+  border-color: transparent;
+}
+.last {
+  display: inline-block;
+  color: white;
+  background-color: rgb(1, 1, 11);
+  border: none;
+  padding: 10px 40px;
+  border-radius: 35px;
+  font-weight: 800;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  font-size: small;
+  text-decoration: none;
+}
+.last:hover {
+  background-color: #fcb408;
+  transition: 0.3s;
+}
+
+/* الصفحة التانية  */
+.sub-page {
+  direction: rtl;
+  margin-top: 50px;
+}
+/* SubInfo Component */
+.sub-info {
+  background: url(../images/Original-of-Facebook-standard-design-1-1.webp);
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.sub-info h1 {
+  font-size: 50px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.sub-info .yyy {
+  font-size: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+}
+.sub-info .btn {
+  display: block;
+  border-radius: 30px;
+  border: solid 1px;
+  padding: 5px 25px;
+  font-size: small;
+}
+/* SubPlans Component */
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.plan {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 0%;
+  width: 31%;
+  height: fit-content;
+}
+.plan .plan-body {
+  padding: 10px;
+  z-index: 4;
+  background-color: #f5f5f5;
+}
+.plan ul {
+  list-style: "✅";
+  padding: 0;
+  margin: 0;
+}
+.plan .price {
+  position: relative;
+  text-align: center;
+}
+.plan .plan-head div {
+  font-size: 25px;
+}
+.plan .plan-head {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.plan .price .p {
+  font-size: 70px;
+  font-weight: 900;
+}
+.plan .price .tag {
+  font-weight: 900;
+}
+.plan .btn {
+  display: block;
+  border-radius: 30px;
+  border: solid 1px;
+  padding: 5px 20px;
+  font-size: large;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.plan .ll {
+  font-size: 13px;
+  text-align: center;
+}
+
+.plan .patch {
+  position: absolute;
+  background-color: #273044;
+  color: #f5f5f5;
+  padding: 3px;
+  width: 35%;
+  left: -7%;
+  top: 3%;
+  text-align: center;
+  rotate: -45deg;
+  font-size: 11px;
+}
+.plans .payM {
+  text-align: center;
+  line-height: 3rem;
+  width: 40%;
+  margin: auto;
+}
+/* SubFeatures Component */
+.sub-features {
+  margin-top: 100px;
+}
+.features {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feat {
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 12px;
+  line-height: 1.5rem;
+  margin: 10px;
+  width: 22%;
+  min-width: 200px;
+}
+a {
+  text-decoration: none;
+  color: #273044;
+}
+.feat h3 {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.feat img {
+  width: 120px;
+  position: relative;
+  top: 0;
+  transition: top 0.3s ease;
+}
+.feat img:hover {
+  top: -10px;
+}
+
+.feat p {
+  font-size: 13px;
+}
+.sub-features .btn {
+  display: block;
+  border-radius: 30px;
+  border: solid 1px;
+  padding: 5px 20px;
+  font-size: large;
+  text-align: center;
+  width: 150px;
+  font-weight: 700;
+  margin: auto;
+}
+/* Banner Components */
+
+.banner {
+  margin-top: 100px;
+  width: 100%;
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  transition: 2s;
+  overflow: hidden;
+}
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0%;
+  line-height: 3rem;
+  color: #f5f5f5;
+  transition: 2s;
+}
+.banner-content .btn {
+  width: 30%;
+  margin: auto;
+  border: solid 1px white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.banner:hover .banner-content {
+  transform: scale(1.1) translate(-50%, -50%);
+  opacity: 100%;
+}
+.banner:hover {
+  background-color: #6f7278;
+}
+.banner-patch {
+  text-align: center;
+  transform: rotate(45deg);
+  width: 120px;
+  color: #f5f5f5;
+  padding: 3px;
+  font-weight: bolder;
+  font-size: small;
+  position: absolute;
+  top: 6%;
+  right: -3%;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.glo {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* SubLast component */
+.partOne {
+  background: url(../images/Organic-content-FB-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 400px 300px;
+  background-position: left bottom;
+  height: 370px;
+  text-align: center;
+}
+.partTwo {
+  text-align: center;
+}
+.partTwo iframe {
+  width: 100%;
+  height: 100%;
+}
+/* SubForm Component */
+.sub-form {
+  margin-top: 100px;
+}
+.form {
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 30px;
+  line-height: 2rem;
+}
+.form input[type="text"],
+input[type="number"] {
+  width: 60%;
+  height: 44px;
+  background-color: #f0f2f5;
+  border: none;
+}
+.form input:focus,
+textarea:focus {
+  outline: none;
+  border: solid 1px rgba(128, 128, 128, 0.545);
+  background-color: transparent;
+}
+.form label {
+  color: #aaaaaa;
+  font-weight: 900;
+}
+.form label::after {
+  content: attr(data-end);
+  color: red;
+}
+.form input[type="radio"] {
+  margin-left: 10px;
+  scale: 1.3;
+}
+.koko {
+  width: 200px;
+}
+.teacher-head {
+  font-size: 45px;
+}
+/*  */
+/* Cart Page */
+.cart {
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  direction: rtl;
+}
+.cart section {
+  width: 45%;
+  min-width: 300px;
+}
+.cart form input[type="text"] {
+  width: 100%;
+}
+#cartItems {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.512);
+  border-radius: 10px;
+  min-height: 200px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.itemInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cartItem img {
+  width: 100px;
+}
+.cartItem {
+  display: flex;
+  align-items: center;
+}
+/*  PaymentInfo-Component*/
+
+.PaymentInfo-head {
+  font-size: 30px;
+  font-weight: 800;
+}
+.PaymentInfo form {
+  border: none;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #6f72781f;
+}
+.AdditionalInfo h2 {
+  margin-bottom: 30px;
+}
+.Order {
+  background-color: #6f72781c;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.PaymentMethod input {
+  margin: 20px 7px;
+}
+.delItem {
+  cursor: pointer;
+}
+.delItem:hover {
+  color: #fcb408;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*over all media query */
+@media only screen and (max-width: 768px) {
+  .right,
+  .left {
+    width: 100%;
+  }
+  .left {
+    display: flex;
+    justify-content: right;
+  }
+  iframe {
+    width: 270px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .system {
+    flex-wrap: wrap;
+  }
+  .system div {
+    width: 100%;
+  }
+  .plan {
+    width: 100%;
+  }
+}
