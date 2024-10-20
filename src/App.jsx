@@ -9,13 +9,10 @@ import QatarPage from "./pages/Qatar_Page";
 import GroupsPage from "./pages/GroupsPage";
 import Private from "./pages/Private";
 import WhoKhososy from "./pages/WhoKhososy";
-import CardsContainer from "./components/CardsContainer";
 import BlogCardsContainer from "./components/BlogCardsContainer";
 import TechnologyTools from "./components/TechnologyTools";
 import NewLearning from "./components/NewLearning";
 import LearningSys from "./components/LearningSys";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Teachers from "./components/Teachers";
 const App = () => {
     return (
