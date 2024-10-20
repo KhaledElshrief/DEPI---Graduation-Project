@@ -54,7 +54,6 @@ const Navbar = () => {
         <ul className="flex space-x-6 text-gray-700 text-sm">
           <li className="hover:text-black cursor-pointer fs-5">
             <NavLink to={"/Cart"}>
-              {" "}
               <FaShoppingCart />
             </NavLink>
           </li>

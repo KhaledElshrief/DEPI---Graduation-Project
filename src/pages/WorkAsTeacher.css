@@ -9,7 +9,6 @@
   font-family: arabic, sans-serif;
   color: #273044;
 }
-/* components الصفحة الاولي كانت معمولة من غير ريأكت فمش متقسمة */
 p {
   font-size: medium;
   margin: 0%;
@@ -415,6 +414,13 @@ textarea:focus {
   min-height: 200px;
   padding: 30px;
   margin-bottom: 50px;
+  color: black;
+}
+.right p {
+  color: black;
+}
+.cart p {
+  color: black;
 }
 .itemInfo {
   display: flex;
@@ -461,7 +467,60 @@ textarea {
   color: #fcb408;
 }
 /*  */
-/*  */
+/* Course Page */
+.CourseDetails {
+  height: 100vh;
+  direction: rtl;
+}
+.CourseHead {
+  background-color: #001931;
+  color: #f0f2f5;
+  height: 240px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.CourseHead span,
+p {
+  color: white;
+}
+.CourseLessons {
+  border: 1px rgba(128, 128, 128, 0.408) solid;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 30px;
+  width: 60%;
+}
+.lesson {
+  padding: 20px;
+  background-color: #55555522;
+  margin: 20px;
+}
+.CourseCard {
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgba(128, 128, 128, 0.408);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+
+  background-color: white;
+}
+.CourseCard img {
+  width: 100%;
+}
+.CourseCard h4 {
+  border-bottom: solid 1px;
+  width: 100%;
+  padding: 20px;
+}
 /*  */
 /*  */
 /*  */
