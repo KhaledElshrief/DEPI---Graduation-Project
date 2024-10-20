@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useInsetData, useInsetDataWithImage } from "../../Hooks/UseInsertData";
-import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR,CART,USER_CART } from "../Type";
+import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR,CART,USER_CART,DELETE_ITEM_CART } from "../Type";
 import BaseUrl from "../../Api/BaseUrl";
 
 
@@ -69,3 +69,32 @@ export const GetLoggedUserCart=async(dispatch)=>{
     }
 
 }
+
+
+
+export const DeleteItemFromCart=(id)=>async(dispatch)=>{
+    console.log("Jj")
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    };
+      try{       
+          const response = await  BaseUrl.delete(`/cart/${id}`,config)
+  
+          dispatch({
+              type: DELETE_ITEM_CART,
+              payload: response,
+              loading:false
+          })
+      }
+      catch(e){
+          dispatch({
+              type: DELETE_ITEM_CART,
+              payload: e.response,
+              
+          })
+      }
+  
+  }
+  

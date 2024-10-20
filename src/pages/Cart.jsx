@@ -5,41 +5,31 @@ import AdditionalInfo from "../components/AdditionalInfo";
 import YourOrder from "../components/YourOrder";
 import PaymentMethod from "../components/PaymentMethod";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./WorkAsTeacher.css";
+import { GetLoggedUserCart } from "../Redux/Actions/CartAction";
+import { useDispatch, useSelector } from "react-redux";
 export default function Cart() {
+  const dispatch=useDispatch()
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
-    if (cartItems.length === 0) return;
-    setTotalPrice(
-      Math.floor(cartItems.reduce((acc, item) => acc + item.price, 0))
-    );
-  }, [cartItems]);
-  useEffect(() => {
-    async function cart() {
-      const res = await fetch("https://fakestoreapi.com/products");
-      const data = await res.json();
-      setCartItems(data);
-    }
-    cart();
+    dispatch(GetLoggedUserCart)
   }, []);
+  const data=useSelector((state)=>state.cartReducer.usercart)
+ 
+
+  useEffect(() => {
+    if(data){
+      setCartItems(data?.data?.data?.cartItems)
+      setTotalPrice(data?.data?.data?.totalPrice)
+    }
+  
+  }, [data]);
 
   function handleDeleteItem(id) {
-    fetch(`https://fakestoreapi.com/products/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to delete the resource.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Resource deleted successfully:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+  
+  
   }
   return (
     <div className="container d-flex cart">

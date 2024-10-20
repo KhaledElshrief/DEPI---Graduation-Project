@@ -5,6 +5,10 @@ export const LOGOUT_USER="LOGOUT_USER"
 export const ERROR="ERROR"
 export const CART="CART"
 export const USER_CART="USER_CART"
+export const DELETE_ITEM_CART="DELETE_ITEM_CART"
+
+
+
 
 
 

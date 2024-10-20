@@ -1,6 +1,29 @@
 import React from "react";
 import paym from "../images/paywf.png";
+import axios from "axios";
+import notify from "../Hook/usenotify";
+import { ToastContainer } from "react-toastify";
 export default function PaymentMethod() {
+    const handelSubmit=async()=>{
+      const config = {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      };
+
+      try{
+          const res=await axios.post(`https://e-commerce-3-gu5g.onrender.com/order`,{},config)
+          if(res.status==200){
+            notify("تم عمل الاوردر ","success")
+          }
+          console.log(res)
+      }
+      catch(e){
+        console.log(e)
+
+      }
+    }
+
   return (
     <section className="PaymentMethod">
       <h2>طريقة الدفع</h2>
@@ -21,7 +44,8 @@ export default function PaymentMethod() {
         لقد قرأتُ الشروط والأحكام وأوافق عليها لهذا الموقع *
       </label>
       <br />
-      <button className="btn btn-warning">تأكيد الطلب</button>
+      <button className="btn btn-warning" onClick={handelSubmit}>تأكيد الطلب</button>
+      <ToastContainer />
     </section>
   );
 }
