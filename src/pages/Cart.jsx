@@ -17,15 +17,25 @@ export default function Cart() {
   }, [cartItems]);
   useEffect(() => {
     async function cart() {
-      const res = await fetch("https://fakestoreapi.com/products");
-      const data = await res.json();
-      setCartItems(data);
+      try {
+        //fake api for testing
+        // const res = await fetch("https://fakestoreapi.com/products");
+        const res = await fetch("http://localhost:8000/course");
+        const data = await res.json();
+        setCartItems(data);
+      } catch (error) {
+        console.error(error);
+      }
     }
     cart();
   }, []);
 
   function handleDeleteItem(id) {
-    fetch(`https://fakestoreapi.com/products/${id}`, {
+    // fake api for testing
+    // fetch(`https://fakestoreapi.com/products/${id}`, {
+    //   method: "DELETE",
+    // })
+    fetch(`http://localhost:8000/course/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

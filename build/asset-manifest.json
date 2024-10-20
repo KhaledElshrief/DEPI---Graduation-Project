@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4d15d3d1.css",
+    "main.js": "/static/js/main.9d878156.js",
+    "static/media/Original-of-Facebook-standard-design-1-1.webp": "/static/media/Original-of-Facebook-standard-design-1-1.5dbb739abc87fe15c1ad.webp",
+    "static/media/12.webp": "/static/media/12.9f6fda644455341bdafc.webp",
+    "static/media/13.webp": "/static/media/13.8d0bc2718e94c3921dd2.webp",
+    "static/media/Organic-content-FB.webp": "/static/media/Organic-content-FB.907beb76020dc299627a.webp",
+    "static/media/15.webp": "/static/media/15.8554f04a1811d576c31a.webp",
+    "static/media/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf": "/static/media/Droid.Arabic.Kufi_DownloadSoftware.iR_.f54c0f206c79d9b4cbf3.ttf",
+    "static/media/Organic-content-FB-1.jpg": "/static/media/Organic-content-FB-1.11bc1cb15b789d725a90.jpg",
+    "static/media/Lectures-Covers-3.webp": "/static/media/Lectures-Covers-3.e3b81b448f2412e58432.webp",
+    "static/media/paywf.png": "/static/media/paywf.6550c9cec5874f34c285.png",
+    "static/media/Organic-content-FB-2-e1700227091823.webp": "/static/media/Organic-content-FB-2-e1700227091823.aa13ffbd7006043c11be.webp",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.4d15d3d1.css.map": "/static/css/main.4d15d3d1.css.map",
+    "main.9d878156.js.map": "/static/js/main.9d878156.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d15d3d1.css",
+    "static/js/main.9d878156.js"
+  ]
+}

@@ -31,7 +31,7 @@ function Item({ item, onDelete }) {
         &times;
       </p>
       <p className="col col-5 itemInfo">
-        <img src={item.img} alt="" />
+        <img src={item.image} alt="" />
         <span>{item.title}</span>
       </p>
       <p className="col col-2">{item.price} جنيها </p>
