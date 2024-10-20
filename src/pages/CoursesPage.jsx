@@ -258,7 +258,7 @@ const CoursesPage = () => {
                     الإجمالي: {getTotalPrice()} EGP
                   </div>
                   <button className="w-full bg-yellow-500 text-white py-2 rounded-lg mt-4">
-                    إتمام الشراء
+                    إتمام   الشراء
                   </button>
                 </>
               )}
