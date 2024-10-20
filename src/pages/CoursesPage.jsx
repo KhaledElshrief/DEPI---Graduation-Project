@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ChevronDown, Plus, ShoppingCart, X } from 'lucide-react';
+import axios from 'axios';
+import { AddToCart, GetLoggedUserCart } from '../Redux/Actions/CartAction';
+import { useDispatch, useSelector } from 'react-redux';
+import notify from '../Hook/usenotify';
+import { ToastContainer } from 'react-toastify';
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
@@ -10,16 +15,17 @@ const CoursesPage = () => {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+  const dispatch=useDispatch();
+  const cartData=useSelector((state)=>state.cartReducer.cart)
+ 
+  const userCart=useSelector((state)=>state.cartReducer.usercart)
+  
+
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch('https://e-commerce-3-gu5g.onrender.com/course/');
-        // if (!response.ok) {
-        //   throw new Error('Network response was not ok');
-        // }
-        //console.log(response)
+        const response = await axios.get('https://e-commerce-3-gu5g.onrender.com/getallcourses');
         const data = await response.data.data;
-        console.log(data)
         setCourses(data);
         setFilteredCourses(data);
         setIsLoading(false);
@@ -28,9 +34,24 @@ const CoursesPage = () => {
         setIsLoading(false);
       }
     };
+    if(cartData){
+    
+      if(cartData?.status==200){
+        notify('تم  الاضافه الى السله', 'success');
 
+      }
+      else{
+        notify(`${cartData.data.message}`, 'error');
+      }
+ 
+
+      
+    }
+    dispatch(GetLoggedUserCart)
     fetchCourses();
-  }, []);
+  }, [cartData]);
+
+
 
   const handleSearch = (event) => {
     const term = event.target.value;
@@ -40,18 +61,24 @@ const CoursesPage = () => {
     );
     setFilteredCourses(filtered);
   };
-
+  dispatch(GetLoggedUserCart)
+ 
   const handleAddCourse = (course) => {
+    dispatch(GetLoggedUserCart)
+    dispatch(AddToCart(course._id))
+   
+    
     setCart(prevCart => {
       const courseIndex = prevCart.findIndex(item => item.id === course.id);
       if (courseIndex !== -1) {
-        // Course already in cart, increment quantity
+
         const newCart = [...prevCart];
         newCart[courseIndex].quantity += 1;
         return newCart;
       } else {
         // Add new course to cart
         return [...prevCart, { ...course, quantity: 1 }];
+
       }
     });
   };
@@ -71,6 +98,9 @@ const CoursesPage = () => {
   if (error) {
     return <div className="flex justify-center items-center h-screen text-red-500">{error}</div>;
   }
+
+
+
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans" dir="rtl">
@@ -216,11 +246,11 @@ const CoursesPage = () => {
                 <p>السلة فارغة</p>
               ) : (
                 <>
-                  {cart.map(item => (
+                  {userCart?.data?.data?.cartItems.map(item => (
                     <div key={item.id} className="flex justify-between items-center mb-2">
-                      <span>{item.title} (x{item.quantity})</span>
+                      <span>{} </span>
                       <div className="flex items-center">
-                        <span className="mr-2">{item.price * item.quantity} EGP</span>
+                        <span className="mr-2">{item.price} EGP</span>
                         <button onClick={() => handleRemoveCourse(item.id)} className="text-red-500">
                           <X className="w-4 h-4" />
                         </button>
@@ -239,6 +269,7 @@ const CoursesPage = () => {
           </div>
         )}
       </main>
+      <ToastContainer />
     </div>
   );
 };

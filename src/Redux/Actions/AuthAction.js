@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useInsetData, useInsetDataWithImage } from "../../Hooks/UseInsertData";
-import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR } from "../Type";
+import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR,CART } from "../Type";
 import BaseUrl from "../../Api/BaseUrl";
 
 
