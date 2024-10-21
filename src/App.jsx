@@ -21,6 +21,7 @@ import ResetPasswordPage from "./pages/ResetPasswordPage";
 import CoursesPage from "./pages/CoursesPage";
 import Cart from "./pages/Cart";
 import Locations from "./pages/Locations";
+import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
   return (
@@ -56,6 +57,7 @@ const App = () => {
             ></Route>
             <Route path="/courses" element={<CoursesPage />}></Route>
             <Route path="/locations" element={<Locations />}></Route>
+            <Route path="/profile" element={<ProfilePage />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,8 @@
-import { LOGIN_USER,LOGIN_USER2,LOGOUT_USER,ERROR } from "../Type";
+import { LOGIN_USER,LOGIN_USER2,LOGOUT_USER,ERROR,FETCH_USER_PROFILE } from "../Type";
 const initail={
     loginuser:'',
     loginuser2:'',
+    loggeduser:'',
     error:''
 }
 
@@ -19,6 +20,10 @@ const authReducer=(State=initail,action)=>{
                     return{
                         loginuser:action.payload
                     }
+                    case FETCH_USER_PROFILE :
+                        return{
+                            loggeduser:action.payload
+                        }
                     case ERROR :
                     return{
                         loginuser:'',

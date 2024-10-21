@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useInsetData, useInsetDataWithImage } from "../../Hooks/UseInsertData";
-import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR,CART } from "../Type";
+import { LOGIN_USER, LOGIN_USER2,LOGOUT_USER,ERROR,CART,FETCH_USER_PROFILE } from "../Type";
 import BaseUrl from "../../Api/BaseUrl";
 
 
@@ -71,10 +71,38 @@ export const logout=async(dispatch)=>{
             
         })
     }
-
 }
 
 
+export const fetchUserProfile=async(dispatch)=>{
+
+    const config = {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      };
+
+
+
+    try{
+        const response =await  BaseUrl.get("/auth/loggedUser",config)
+       
+      
+        dispatch({
+            type: FETCH_USER_PROFILE,
+            payload: response,
+            loading:false
+        })
+    }
+    catch(e){
+       
+        dispatch({
+            type: FETCH_USER_PROFILE,
+            payload: e.response
+            
+        })
+    }
+}
 
 
 

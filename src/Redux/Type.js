@@ -7,6 +7,7 @@ export const CART="CART"
 export const USER_CART="USER_CART"
 export const DELETE_ITEM_CART="DELETE_ITEM_CART"
 
+export const FETCH_USER_PROFILE = "FETCH_USER_PROFILE"
 
 
 
