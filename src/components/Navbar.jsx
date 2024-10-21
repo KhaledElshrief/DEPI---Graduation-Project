@@ -10,6 +10,7 @@ import {
   FaTimes,
   FaUser,
   FaChevronDown,
+  FaPlug,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -88,20 +89,33 @@ const Navbar = () => {
               <NavLink to="/whokhososy">مين خصوصى؟</NavLink>
             </li>
             <li className="hover:text-black cursor-pointer mb-2 lg:mb-0">
-              {data?.status === 200 ||localStorage.getItem("token") ? (
-                <div className="relative">
-                  <button onClick={toggleProfileDropdown} className="flex items-center">
-                    <FaUser className="h-5 w-5" />
-                    <span className="sr-only">User profile</span>
-                  </button>
-                  <ul className={`absolute ${isProfileDropdownOpen ? 'block' : 'hidden'} right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg`}>
-                    <NavLink to="/profile"><li className="px-4 py-2 hover:bg-gray-100">الملف الشخصي</li></NavLink>
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={handleLogout}>تسجيل خروج</li>
-                  </ul>
-                </div>
-              ) : (
-                <NavLink to="/Account">حسابي</NavLink>
-              )}
+            {data?.status === 200 || localStorage.getItem("token") ? (
+        <div className="relative">
+
+
+
+          <button onClick={toggleProfileDropdown} className="flex items-center">
+            <FaUser className="h-5 w-5" />
+            <span className="sr-only">User profile</span>
+          </button>
+          <ul
+            className={`absolute ${isProfileDropdownOpen ? 'block' : 'hidden'} right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg`}
+          >
+            <NavLink to="/profile">
+              <li className="px-4 py-2 hover:bg-gray-100">الملف الشخصي</li>
+            </NavLink>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={handleLogout}
+            >
+              تسجيل خروج
+            </li>
+          </ul>
+        
+        </div>
+      ) : (
+        <NavLink to="/Account">حسابي</NavLink>
+      )}
             </li>
             { 
             data?.status === 200 ||localStorage.getItem("token") ?( <li className="hover:text-black cursor-pointer mb-2 lg:mb-0">

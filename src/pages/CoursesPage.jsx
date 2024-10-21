@@ -5,6 +5,10 @@ import { AddToCart, GetLoggedUserCart } from '../Redux/Actions/CartAction';
 import { useDispatch, useSelector } from 'react-redux';
 import notify from '../Hook/usenotify';
 import { ToastContainer } from 'react-toastify';
+import { NavLink } from 'react-bootstrap';
+import { FaPlugCircleMinus } from 'react-icons/fa6';
+import { FaPlus } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
@@ -51,7 +55,7 @@ const CoursesPage = () => {
     fetchCourses();
   }, [cartData]);
 
-
+const Navigate=useNavigate()
 
   const handleSearch = (event) => {
     const term = event.target.value;
@@ -120,11 +124,15 @@ const CoursesPage = () => {
             <Search className="absolute right-3 top-2.5 text-gray-400" />
           </div>
           <div className="flex space-x-4 space-x-reverse">
-            <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg">ترتيب</button>
-            <button className="bg-gray-200 text-gray-600 px-4 py-2 rounded-lg flex items-center">
-              <ChevronDown className="w-4 h-4 ml-2" />
-              <span>تاريخ الإضافة (أولاً)</span>
+            <button onClick={()=>{
+              Navigate("/addcourse")
+            }} className="bg-yellow-500 text-white px-4 py-2 rounded-lg">اضافه كورس</button>
+            {/* <NavLink to="/add-course">
+            <button className="flex items-center bg-green-500 text-white px-2 py-2 rounded-lg hover:bg-green-600">
+              <FaPlus className="h-5 w-5" />
+              <span className="sr-only">Add Course</span>
             </button>
+          </NavLink> */}
             <button 
               className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center"
               onClick={() => setIsCartOpen(true)}

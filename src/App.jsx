@@ -22,6 +22,8 @@ import CoursesPage from "./pages/CoursesPage";
 import Cart from "./pages/Cart";
 import Locations from "./pages/Locations";
 import ProfilePage from "./pages/ProfilePage";
+import AddCourse from "./pages/AddCourse";
+import { ToastContainer } from "react-bootstrap";
 
 const App = () => {
   return (
@@ -58,9 +60,11 @@ const App = () => {
             <Route path="/courses" element={<CoursesPage />}></Route>
             <Route path="/locations" element={<Locations />}></Route>
             <Route path="/profile" element={<ProfilePage />}></Route>
+            <Route path="/addcourse" element={<AddCourse />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </>
   );
 };
